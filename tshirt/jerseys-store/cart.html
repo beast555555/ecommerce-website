@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - JerseyPro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container container">
+      <a href="index.html" class="logo">JerseyPro</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+      <div class="cart-icon" title="View Cart">🛒
+        <span class="cart-badge"></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <section class="section">
+      <h2 class="section-title">Your Cart</h2>
+      <div class="cart-items"></div>
+      
+      <div class="cart-total">
+        <h3>Total: ₹<span class="total-price">0</span></h3>
+        <button class="btn" onclick="checkout()" style="font-size: 1.2rem; padding: 1rem 3rem; margin-top: 1rem;">Proceed to Checkout</button>
+        <a href="products.html" class="btn" style="margin-top: 1rem; background: var(--bg-secondary);">Continue Shopping</a>
+      </div>
+    </section>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

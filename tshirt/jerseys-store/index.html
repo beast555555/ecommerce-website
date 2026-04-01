@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JerseyPro - Premium Sports Jerseys</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container container">
+      <a href="index.html" class="logo">JerseyPro</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+      <div class="cart-icon" title="View Cart">🛒
+        <span class="cart-badge"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Premium Sports Jerseys</h1>
+      <p>Discover authentic football and cricket jerseys from legends like Messi, Ronaldo, Kohli & more. Limited edition drops!</p>
+      <a href="products.html" class="btn" style="font-size: 1.2rem; padding: 1rem 2rem;">Shop Now</a>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- Trending Section -->
+    <section class="section">
+      <h2 class="section-title">Trending Jerseys</h2>
+      <div class="products-grid"></div>
+    </section>
+
+    <!-- Collections -->
+    <section class="section">
+      <h2 class="section-title">Collections</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+        <div style="background: var(--bg-secondary); padding: 3rem; border-radius: var(--border-radius); text-align: center; border: 2px solid var(--neon-green);">
+          <h3 style="color: var(--neon-green);">Football 🔥</h3>
+          <p>World-class football stars jerseys</p>
+          <a href="products.html?category=football" class="btn">Explore</a>
+        </div>
+        <div style="background: var(--bg-secondary); padding: 3rem; border-radius: var(--border-radius); text-align: center; border: 2px solid var(--neon-red);">
+          <h3 style="color: var(--neon-red);">Cricket 🏏</h3>
+          <p>Indian cricket legends collection</p>
+          <a href="products.html?category=cricket" class="btn">Explore</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured -->
+    <section class="section">
+      <h2 class="section-title">Featured Picks</h2>
+      <div class="products-grid" id="featured-grid"></div>
+    </section>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // Homepage specific: Render trending (top 4) and featured (next 4)
+    document.addEventListener('DOMContentLoaded', function() {
+      renderProducts(products.slice(0, 4), '.products-grid');
+      renderProducts(products.slice(4, 8), '#featured-grid');
+    });
+  </script>
+</body>
+</html>
